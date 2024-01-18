@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Funny Developer Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #222;
+            overflow: hidden;
+        }
+        .section {
+            position: relative;
+            padding: 20px;
+            color: white;
+            animation: colorchange 20s infinite;
+        }
+        .section h2 {
+            animation: moveInLeft 5s ease-out;
+        }
+        .section p {
+            animation: moveInRight 5s ease-out;
+        }
+        @keyframes colorchange {
+            0%   {background: red;}
+            25%  {background: yellow;}
+            50%  {background: blue;}
+            75%  {background: green;}
+            100% {background: red;}
+        }
+        @keyframes moveInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            80% {
+                transform: translateX(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(0);
+            }
+        }
+        @keyframes moveInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            80% {
+                transform: translateX(-10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="section">
+        <h2>Welcome Developers!</h2>
+    </section>
+
+    <section class="section">
+        <h2>Why don't programmers like nature?</h2>
+        <p>It has too many bugs.</p>
+    </section>
+
+    <section class="section">
+        <h2>Why do programmers always mix up Christmas and Halloween?</h2>
+        <p>Because Oct 31 == Dec 25.</p>
+    </section>
+
+    <section class="section">
+        <h2>Why do programmers prefer iOS development?</h2>
+        <p>Because on iOS, there are no Windows or Gates.</p>
+    </section>
+
+    <section class="section">
+        <h2>Why don't programmers like to go outside?</h2>
+        <p>Because the sunlight causes too many glares on their screens.</p>
+    </section>
+
+</body>
+</html>

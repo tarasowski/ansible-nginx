@@ -1,0 +1,12 @@
+- name: Install packages
+  ansible.builtin.apt: name={{ item }} update_cache=yes state=latest
+  loop: ["nginx", "vim"]
+
+- name: Copy index page
+  ansible.builtin.copy:
+    src: /opt/test-playbook/public/index.html
+    dest: /var/www/html/index.html
+    owner: www-data
+    group: www-data
+    mode: "0644"
+  tags: ["deploy"]
